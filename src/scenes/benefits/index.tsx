@@ -1,3 +1,4 @@
+import ActionButton from "@/shared/ActionButton";
 import HText from "@/shared/HText";
 import { BenefitType, SelectedPage } from "@/shared/types";
 import { HomeModernIcon, UserGroupIcon, AcademicCapIcon } from "@heroicons/react/24/solid";
@@ -79,6 +80,68 @@ const Benefits = ({setSelectedPage}: Props) => {
             />
           ))}
         </motion.div>
+        {/* Graphics and Description */}
+        <div>
+          {/* Graphic */}
+          <img>
+
+          </img>
+          {/* Description */}
+          <div>
+            {/* Title */}
+            <div
+              className="relative"
+            >
+              <div
+                className="
+                  before:absolute 
+                  before:-top-20 
+                  before:-left-20 
+                  before:z-[1] 
+                  before:content-abstractwaves
+                "
+              >
+                <div>
+                  <HText>
+                    MILLIONS OF HAPPY MEMBERS GETTING{" "}
+                    <span
+                      className="text-primary-500"
+                    >FIT</span>
+                  </HText>
+                </div>
+
+              </div>
+            </div>
+            {/* Description */}
+            <div>
+              <p className="my-5">
+                Master of One. Choreo Cult. Anthem. All classes at Equinox are created and developed by the industry's best minds and taught by talented fitness instructors who test your limits and inspire results.
+              </p>
+
+              <p className="mb-5">
+                Every class is booked in advance and complimentary to you as a member.
+              </p>
+            </div>
+            {/* Button */}
+            <div
+              className="relative mt-16"
+            >
+              <div
+                className="
+                  before:absolute 
+                  before:-bottom-20 
+                  before:right-40 
+                  before:z-[-1] 
+                  before:content-sparkles"
+              >
+                <ActionButton setSelectedPage={setSelectedPage}>
+                  Join Now
+                </ActionButton>
+              </div>
+
+            </div>
+          </div>
+        </div>
       </motion.div>
     </section>
   );
