@@ -3,6 +3,7 @@ import HText from "@/shared/HText";
 import { BenefitType, SelectedPage } from "@/shared/types";
 import { HomeModernIcon, UserGroupIcon, AcademicCapIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
+import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png";
 import Benefit from "./Benefit";
 
 const benefits: Array<BenefitType> = [
@@ -81,9 +82,15 @@ const Benefits = ({setSelectedPage}: Props) => {
           ))}
         </motion.div>
         {/* Graphics and Description */}
-        <div>
+        <div
+          className="mt-16 items-center justify-between gap-20 md:mt-28 md:flex"
+        >
           {/* Graphic */}
-          <img>
+          <img
+            className="mx-auto"
+            alt="benefits-page-graphic"
+            src={BenefitsPageGraphic}
+          >
 
           </img>
           {/* Description */}
@@ -101,27 +108,44 @@ const Benefits = ({setSelectedPage}: Props) => {
                   before:content-abstractwaves
                 "
               >
-                <div>
+                <motion.div
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ duration: 0.5 }}
+                  variants={{
+                    hidden: { opacity: 0, x: 50 },
+                    visible: { opacity: 1, x: 0 },
+                  }}
+                >
                   <HText>
                     MILLIONS OF HAPPY MEMBERS GETTING{" "}
                     <span
                       className="text-primary-500"
                     >FIT</span>
                   </HText>
-                </div>
+                </motion.div>
 
               </div>
             </div>
             {/* Description */}
-            <div>
+            <motion.div
+             initial="hidden"
+             whileInView="visible"
+             viewport={{ once: true, amount: 0.5 }}
+             transition={{ delay: 0.2, duration: 0.5 }}
+             variants={{
+               hidden: { opacity: 0, x: 50 },
+               visible: { opacity: 1, x: 0 },
+             }}
+            >
               <p className="my-5">
                 Master of One. Choreo Cult. Anthem. All classes at Equinox are created and developed by the industry's best minds and taught by talented fitness instructors who test your limits and inspire results.
               </p>
-
               <p className="mb-5">
                 Every class is booked in advance and complimentary to you as a member.
               </p>
-            </div>
+            </motion.div>
             {/* Button */}
             <div
               className="relative mt-16"
