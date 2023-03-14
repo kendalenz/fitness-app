@@ -69,9 +69,7 @@ const OurClasses = ({ setSelectedPage }: Props) => {
           >
             <div className="md:w-3/5">
               <HText>OUR CLASSES</HText>
-              <p
-              className="py-5"
-              >
+              <p className="py-5">
                 Fitness classes at Evogym are experiences, created, and developed by the industry’s best minds bringing results through innovation.
               </p>
             </div>
