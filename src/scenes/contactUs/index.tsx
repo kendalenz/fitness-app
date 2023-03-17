@@ -5,7 +5,7 @@ import ContactUsPageGraphic from "@/assets/ContactUsPageGraphic.png";
 import HText from "@/shared/HText";
 
 type Props = {
-    setSelectedPage: (value: SelectedPage) => void;
+  setSelectedPage: (value: SelectedPage) => void;
 }
 
 const ContactUs = ({ setSelectedPage }: Props) => {
@@ -22,7 +22,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
     const isValid = await trigger();
     if (!isValid) {
       e.preventDefault();
-    }
+    };
   };
 
   return (
@@ -41,25 +41,23 @@ const ContactUs = ({ setSelectedPage }: Props) => {
           }}
         >
           <HText>
-            <span className="text-primary-500">JOIN NOW</span> TO GET IN SHAPE
+            <span className="text-primary-500">JOIN NOW</span> AND GET IN SHAPE
           </HText>
           <p className="my-5">
-            Blah blahhhhhhhhhhh
-            Blahhhhh
+            Experience the best at EvoGym
           </p>
-
         </motion.div>
         {/* Form and Image */}
         <div className="mt-10 justify-between gap-8 md:flex">
           <motion.div className="mt-10 basis-3/5 md:mt-0"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5 }}
-          variants={{
-            hidden: { opacity: 0, y: 50 },
-            visible: { opacity: 1, y: 0 },
-          }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
           >
             <form
               target="_blank"
@@ -114,7 +112,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               {errors.message && (
                 <p className="mt-1 text-primary-500">
                   {errors.message.type === "required" && "This field is required."}
-                  {errors.message.type === "maxLength" && "Max length is 2000 characters."}
+                  {errors.message.type === "maxLength" && "Max length is 2,000 characters."}
                 </p>
               )}
               <button
@@ -132,23 +130,22 @@ const ContactUs = ({ setSelectedPage }: Props) => {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ delay: 0.2, duration: 0.5 }}
             variants={{
-            hidden: { opacity: 0, y: 50 },
-            visible: { opacity: 1, y: 0 },
-          }}
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
           >
             <div className="md:before:content-evolvetext w-full before:absolute before:-bottom-20 before:-right-10 before:z-[-1]">
               <img
                 className="w-full"
                 alt="contact-us-page-graphic"
                 src={ContactUsPageGraphic}
-              >
-              </img>
+              />
             </div>
           </motion.div>
         </div>
       </motion.div>
     </section>
-  )
-}
+  );
+};
 
 export default ContactUs;

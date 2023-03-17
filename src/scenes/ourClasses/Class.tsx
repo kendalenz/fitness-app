@@ -17,7 +17,7 @@ const Class = ({ name, description, image}: Props) => {
       </div>
       <img alt={`${image}`} src={`${image}`}></img>
     </li>
-  )
+  );
 };
 
 export default Class;
